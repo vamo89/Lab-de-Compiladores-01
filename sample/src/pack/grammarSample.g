@@ -12,4 +12,10 @@ options {
   package pack;
 }
 
-rule: ;
+rule: 
+  id=IDENT+ {
+    System.out.println($id.getText());
+  };
+
+IDENT : 'a'..'z'+;
+WS : (' ' | '\t' | '\n' | '\r' | '\f')+ {$channel = HIDDEN;};
