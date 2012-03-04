@@ -1,16 +1,17 @@
-grammar grammarSample;
+grammar test1;
 
 options {
   language = Java;
 }
 
 @header {
-  package pack;
+  package br.com.project1;
 }
 
 @lexer::header {
-  package pack;
+    package br.com.project1;
 }
+
 
 rule: 
   id=IDENT+ {
