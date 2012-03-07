@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\ra083345\\workspace\\test\\src\\br\\com\\project1\\test1.g 2012-03-04 12:44:28
+// $ANTLR 3.4 C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g 2012-03-06 20:21:55
 
   package br.com.project1;
 
@@ -34,20 +34,20 @@ public class test1Parser extends Parser {
     }
 
     public String[] getTokenNames() { return test1Parser.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\ra083345\\workspace\\test\\src\\br\\com\\project1\\test1.g"; }
+    public String getGrammarFileName() { return "C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g"; }
 
 
 
     // $ANTLR start "rule"
-    // C:\\Users\\ra083345\\workspace\\test\\src\\br\\com\\project1\\test1.g:16:1: rule : (id= IDENT )+ ;
+    // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:16:1: rule : (id= IDENT )+ ;
     public final void rule() throws RecognitionException {
         Token id=null;
 
         try {
-            // C:\\Users\\ra083345\\workspace\\test\\src\\br\\com\\project1\\test1.g:16:5: ( (id= IDENT )+ )
-            // C:\\Users\\ra083345\\workspace\\test\\src\\br\\com\\project1\\test1.g:17:3: (id= IDENT )+
+            // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:16:5: ( (id= IDENT )+ )
+            // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:17:3: (id= IDENT )+
             {
-            // C:\\Users\\ra083345\\workspace\\test\\src\\br\\com\\project1\\test1.g:17:5: (id= IDENT )+
+            // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:17:5: (id= IDENT )+
             int cnt1=0;
             loop1:
             do {
@@ -61,7 +61,7 @@ public class test1Parser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Users\\ra083345\\workspace\\test\\src\\br\\com\\project1\\test1.g:17:5: id= IDENT
+            	    // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:17:5: id= IDENT
             	    {
             	    id=(Token)match(input,IDENT,FOLLOW_IDENT_in_rule44); 
 

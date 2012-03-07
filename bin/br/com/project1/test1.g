@@ -18,5 +18,5 @@ rule:
     System.out.println($id.getText());
   };
 
-IDENT : 'a'..'z'+;
+IDENT : 'a'..'z'|'A'..'Z'+;
 WS : (' ' | '\t' | '\n' | '\r' | '\f')+ {$channel = HIDDEN;};

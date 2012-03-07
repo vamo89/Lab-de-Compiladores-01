@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g 2012-03-06 20:06:09
+// $ANTLR 3.4 C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g 2012-03-06 20:21:56
 
     package br.com.project1;
 
@@ -27,14 +27,14 @@ public class test1Lexer extends Lexer {
     public test1Lexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g"; }
+    public String getGrammarFileName() { return "C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g"; }
 
     // $ANTLR start "IDENT"
     public final void mIDENT() throws RecognitionException {
         try {
             int _type = IDENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:21:7: ( 'a' .. 'z' | ( 'A' .. 'Z' )+ )
+            // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:21:7: ( 'a' .. 'z' | ( 'A' .. 'Z' )+ )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -53,16 +53,16 @@ public class test1Lexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:21:9: 'a' .. 'z'
+                    // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:21:9: 'a' .. 'z'
                     {
                     matchRange('a','z'); 
 
                     }
                     break;
                 case 2 :
-                    // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:21:18: ( 'A' .. 'Z' )+
+                    // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:21:18: ( 'A' .. 'Z' )+
                     {
-                    // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:21:18: ( 'A' .. 'Z' )+
+                    // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:21:18: ( 'A' .. 'Z' )+
                     int cnt1=0;
                     loop1:
                     do {
@@ -76,7 +76,7 @@ public class test1Lexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:
+                    	    // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:
                     	    {
                     	    if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') ) {
                     	        input.consume();
@@ -119,10 +119,10 @@ public class test1Lexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:22:4: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
-            // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:22:6: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:22:4: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
+            // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:22:6: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             {
-            // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:22:6: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:22:6: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             int cnt3=0;
             loop3:
             do {
@@ -136,7 +136,7 @@ public class test1Lexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:
+            	    // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:
             	    {
             	    if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
             	        input.consume();
@@ -175,7 +175,7 @@ public class test1Lexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:1:8: ( IDENT | WS )
+        // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:1:8: ( IDENT | WS )
         int alt4=2;
         int LA4_0 = input.LA(1);
 
@@ -194,7 +194,7 @@ public class test1Lexer extends Lexer {
         }
         switch (alt4) {
             case 1 :
-                // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:1:10: IDENT
+                // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:1:10: IDENT
                 {
                 mIDENT(); 
 
@@ -202,7 +202,7 @@ public class test1Lexer extends Lexer {
                 }
                 break;
             case 2 :
-                // C:\\Documents and Settings\\teste\\workspace\\sample\\src\\br\\com\\project1\\test1.g:1:16: WS
+                // C:\\Documents and Settings\\teste\\workspace\\Lab-de-Compiladores-01\\src\\br\\com\\project1\\test1.g:1:16: WS
                 {
                 mWS(); 
 
