@@ -1,4 +1,4 @@
-// $ANTLR 3.4 D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g 2012-03-17 16:31:33
+// $ANTLR 3.4 D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g 2012-03-18 00:02:52
 
   package compiladores.lab01.parserLatexToHtml;
 
@@ -11,26 +11,28 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class LatexToHtmlLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__21=21;
-    public static final int T__22=22;
     public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
     public static final int AUTHOR=4;
     public static final int BEGIN=5;
     public static final int DOCUMENT=6;
     public static final int DOCUMENTCLASS=7;
-    public static final int END=8;
-    public static final int INCLUDEGRAPHICS=9;
-    public static final int ITEM=10;
-    public static final int ITEMIZE=11;
-    public static final int MKTITLE=12;
-    public static final int PUNCT=13;
-    public static final int TEXTBF=14;
-    public static final int TEXTIT=15;
-    public static final int TEXT_CONTENT=16;
-    public static final int TITLE=17;
-    public static final int USEPACKAGE=18;
-    public static final int USERPACKAGE=19;
-    public static final int WS=20;
+    public static final int DOLLAR=8;
+    public static final int END=9;
+    public static final int INCLUDEGRAPHICS=10;
+    public static final int ITEM=11;
+    public static final int ITEMIZE=12;
+    public static final int MKTITLE=13;
+    public static final int PUNCT=14;
+    public static final int SPECIALCHAR=15;
+    public static final int TEXTBF=16;
+    public static final int TEXTIT=17;
+    public static final int TEXT_CONTENT=18;
+    public static final int TITLE=19;
+    public static final int USEPACKAGE=20;
+    public static final int USERPACKAGE=21;
+    public static final int WS=22;
 
     // delegates
     // delegators
@@ -47,10 +49,10 @@ public class LatexToHtmlLexer extends Lexer {
     }
     public String getGrammarFileName() { return "D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g"; }
 
-    // $ANTLR start "T__21"
-    public final void mT__21() throws RecognitionException {
+    // $ANTLR start "T__23"
+    public final void mT__23() throws RecognitionException {
         try {
-            int _type = T__21;
+            int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:11:7: ( '\\\\' )
             // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:11:9: '\\\\'
@@ -66,12 +68,12 @@ public class LatexToHtmlLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__21"
+    // $ANTLR end "T__23"
 
-    // $ANTLR start "T__22"
-    public final void mT__22() throws RecognitionException {
+    // $ANTLR start "T__24"
+    public final void mT__24() throws RecognitionException {
         try {
-            int _type = T__22;
+            int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:12:7: ( '{' )
             // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:12:9: '{'
@@ -87,12 +89,12 @@ public class LatexToHtmlLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__22"
+    // $ANTLR end "T__24"
 
-    // $ANTLR start "T__23"
-    public final void mT__23() throws RecognitionException {
+    // $ANTLR start "T__25"
+    public final void mT__25() throws RecognitionException {
         try {
-            int _type = T__23;
+            int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:13:7: ( '}' )
             // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:13:9: '}'
@@ -108,15 +110,15 @@ public class LatexToHtmlLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__23"
+    // $ANTLR end "T__25"
 
     // $ANTLR start "BEGIN"
     public final void mBEGIN() throws RecognitionException {
         try {
             int _type = BEGIN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:20:17: ( '\\\\' 'begin' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:20:18: '\\\\' 'begin'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:21:17: ( '\\\\' 'begin' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:21:18: '\\\\' 'begin'
             {
             match('\\'); 
 
@@ -140,8 +142,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = DOCUMENTCLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:21:17: ( '\\\\' 'documentclass' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:21:18: '\\\\' 'documentclass'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:22:17: ( '\\\\' 'documentclass' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:22:18: '\\\\' 'documentclass'
             {
             match('\\'); 
 
@@ -165,8 +167,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = DOCUMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:22:17: ( '{document}' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:22:18: '{document}'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:23:17: ( '{document}' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:23:18: '{document}'
             {
             match("{document}"); 
 
@@ -188,8 +190,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = ITEMIZE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:23:17: ( '{itemize}' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:23:18: '{itemize}'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:24:17: ( '{itemize}' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:24:18: '{itemize}'
             {
             match("{itemize}"); 
 
@@ -211,8 +213,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = ITEM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:24:17: ( '\\\\' 'item' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:24:18: '\\\\' 'item'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:25:17: ( '\\\\' 'item' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:25:18: '\\\\' 'item'
             {
             match('\\'); 
 
@@ -236,8 +238,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = TEXTBF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:25:17: ( '\\\\' 'textbf' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:25:18: '\\\\' 'textbf'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:26:17: ( '\\\\' 'textbf' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:26:18: '\\\\' 'textbf'
             {
             match('\\'); 
 
@@ -261,8 +263,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = TEXTIT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:26:17: ( '\\\\' 'textit' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:26:18: '\\\\' 'textit'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:27:17: ( '\\\\' 'textit' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:27:18: '\\\\' 'textit'
             {
             match('\\'); 
 
@@ -286,8 +288,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = END;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:27:17: ( '\\\\' 'end' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:27:18: '\\\\' 'end'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:28:17: ( '\\\\' 'end' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:28:18: '\\\\' 'end'
             {
             match('\\'); 
 
@@ -311,8 +313,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = USEPACKAGE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:28:17: ( '\\\\' 'usepackage' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:28:18: '\\\\' 'usepackage'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:29:17: ( '\\\\' 'usepackage' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:29:18: '\\\\' 'usepackage'
             {
             match('\\'); 
 
@@ -336,8 +338,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = INCLUDEGRAPHICS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:29:17: ( '\\\\' 'includegraphics' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:29:18: '\\\\' 'includegraphics'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:30:17: ( '\\\\' 'includegraphics' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:30:18: '\\\\' 'includegraphics'
             {
             match('\\'); 
 
@@ -361,8 +363,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = TITLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:30:17: ( '\\\\' 'title' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:30:18: '\\\\' 'title'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:31:17: ( '\\\\' 'title' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:31:18: '\\\\' 'title'
             {
             match('\\'); 
 
@@ -386,8 +388,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = MKTITLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:31:17: ( '\\\\' 'maketitle' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:31:18: '\\\\' 'maketitle'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:32:17: ( '\\\\' 'maketitle' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:32:18: '\\\\' 'maketitle'
             {
             match('\\'); 
 
@@ -411,8 +413,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = AUTHOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:32:17: ( '\\\\author' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:32:18: '\\\\author'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:33:17: ( '\\\\author' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:33:18: '\\\\author'
             {
             match("\\author"); 
 
@@ -429,12 +431,33 @@ public class LatexToHtmlLexer extends Lexer {
     }
     // $ANTLR end "AUTHOR"
 
+    // $ANTLR start "DOLLAR"
+    public final void mDOLLAR() throws RecognitionException {
+        try {
+            int _type = DOLLAR;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:34:17: ( '$' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:34:18: '$'
+            {
+            match('$'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "DOLLAR"
+
     // $ANTLR start "PUNCT"
     public final void mPUNCT() throws RecognitionException {
         try {
             int _type = PUNCT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:33:17: ( ( '.' | ',' | ';' | '-' | '[' | ']' ) )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:35:17: ( ( '.' | ',' | ';' | '-' | '[' | ']' ) )
             // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:
             {
             if ( (input.LA(1) >= ',' && input.LA(1) <= '.')||input.LA(1)==';'||input.LA(1)=='['||input.LA(1)==']' ) {
@@ -463,8 +486,8 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = TEXT_CONTENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:34:17: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )* )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:34:18: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:17: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )* )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:18: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )*
             {
             if ( (input.LA(1) >= ',' && input.LA(1) <= '.')||(input.LA(1) >= '0' && input.LA(1) <= '9')||input.LA(1)==';'||(input.LA(1) >= 'A' && input.LA(1) <= '[')||input.LA(1)==']'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -476,7 +499,7 @@ public class LatexToHtmlLexer extends Lexer {
             }
 
 
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:34:59: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:59: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )*
             loop1:
             do {
                 int alt1=6;
@@ -579,28 +602,28 @@ public class LatexToHtmlLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:34:60: 'a' .. 'z'
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:60: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
             	    }
             	    break;
             	case 2 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:34:71: 'A' .. 'Z'
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:71: 'A' .. 'Z'
             	    {
             	    matchRange('A','Z'); 
 
             	    }
             	    break;
             	case 3 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:34:82: '0' .. '9'
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:82: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
             	    }
             	    break;
             	case 4 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:34:93: PUNCT
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:93: PUNCT
             	    {
             	    mPUNCT(); 
 
@@ -608,7 +631,7 @@ public class LatexToHtmlLexer extends Lexer {
             	    }
             	    break;
             	case 5 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:34:101: WS
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:101: WS
             	    {
             	    mWS(); 
 
@@ -633,18 +656,41 @@ public class LatexToHtmlLexer extends Lexer {
     }
     // $ANTLR end "TEXT_CONTENT"
 
+    // $ANTLR start "SPECIALCHAR"
+    public final void mSPECIALCHAR() throws RecognitionException {
+        try {
+            int _type = SPECIALCHAR;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:38:17: ( 'Omega(n)' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:38:18: 'Omega(n)'
+            {
+            match("Omega(n)"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "SPECIALCHAR"
+
     // $ANTLR start "USERPACKAGE"
     public final void mUSERPACKAGE() throws RecognitionException {
         try {
             int _type = USERPACKAGE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:53:12: ( USEPACKAGE ( TEXT_CONTENT | '{' TEXT_CONTENT '}' )* )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:54:2: USEPACKAGE ( TEXT_CONTENT | '{' TEXT_CONTENT '}' )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:58:12: ( USEPACKAGE ( TEXT_CONTENT | '{' TEXT_CONTENT '}' )* )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:59:2: USEPACKAGE ( TEXT_CONTENT | '{' TEXT_CONTENT '}' )*
             {
             mUSEPACKAGE(); 
 
 
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:54:13: ( TEXT_CONTENT | '{' TEXT_CONTENT '}' )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:59:13: ( TEXT_CONTENT | '{' TEXT_CONTENT '}' )*
             loop2:
             do {
                 int alt2=3;
@@ -660,7 +706,7 @@ public class LatexToHtmlLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:54:14: TEXT_CONTENT
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:59:14: TEXT_CONTENT
             	    {
             	    mTEXT_CONTENT(); 
 
@@ -668,7 +714,7 @@ public class LatexToHtmlLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:54:29: '{' TEXT_CONTENT '}'
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:59:29: '{' TEXT_CONTENT '}'
             	    {
             	    match('{'); 
 
@@ -704,10 +750,10 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:56:3: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:56:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:61:3: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:61:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:56:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:61:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             int cnt3=0;
             loop3:
             do {
@@ -760,8 +806,8 @@ public class LatexToHtmlLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:8: ( T__21 | T__22 | T__23 | BEGIN | DOCUMENTCLASS | DOCUMENT | ITEMIZE | ITEM | TEXTBF | TEXTIT | END | USEPACKAGE | INCLUDEGRAPHICS | TITLE | MKTITLE | AUTHOR | PUNCT | TEXT_CONTENT | USERPACKAGE | WS )
-        int alt4=20;
+        // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:8: ( T__23 | T__24 | T__25 | BEGIN | DOCUMENTCLASS | DOCUMENT | ITEMIZE | ITEM | TEXTBF | TEXTIT | END | USEPACKAGE | INCLUDEGRAPHICS | TITLE | MKTITLE | AUTHOR | DOLLAR | PUNCT | TEXT_CONTENT | SPECIALCHAR | USERPACKAGE | WS )
+        int alt4=22;
         switch ( input.LA(1) ) {
         case '\\':
             {
@@ -778,17 +824,17 @@ public class LatexToHtmlLexer extends Lexer {
                 break;
             case 'i':
                 {
-                int LA4_9 = input.LA(3);
+                int LA4_11 = input.LA(3);
 
-                if ( (LA4_9=='t') ) {
+                if ( (LA4_11=='t') ) {
                     alt4=8;
                 }
-                else if ( (LA4_9=='n') ) {
+                else if ( (LA4_11=='n') ) {
                     alt4=13;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 4, 9, input);
+                        new NoViableAltException("", 4, 11, input);
 
                     throw nvae;
 
@@ -797,26 +843,26 @@ public class LatexToHtmlLexer extends Lexer {
                 break;
             case 't':
                 {
-                int LA4_10 = input.LA(3);
+                int LA4_12 = input.LA(3);
 
-                if ( (LA4_10=='e') ) {
-                    int LA4_22 = input.LA(4);
+                if ( (LA4_12=='e') ) {
+                    int LA4_25 = input.LA(4);
 
-                    if ( (LA4_22=='x') ) {
-                        int LA4_25 = input.LA(5);
+                    if ( (LA4_25=='x') ) {
+                        int LA4_29 = input.LA(5);
 
-                        if ( (LA4_25=='t') ) {
-                            int LA4_27 = input.LA(6);
+                        if ( (LA4_29=='t') ) {
+                            int LA4_32 = input.LA(6);
 
-                            if ( (LA4_27=='b') ) {
+                            if ( (LA4_32=='b') ) {
                                 alt4=9;
                             }
-                            else if ( (LA4_27=='i') ) {
+                            else if ( (LA4_32=='i') ) {
                                 alt4=10;
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 4, 27, input);
+                                    new NoViableAltException("", 4, 32, input);
 
                                 throw nvae;
 
@@ -824,7 +870,7 @@ public class LatexToHtmlLexer extends Lexer {
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 4, 25, input);
+                                new NoViableAltException("", 4, 29, input);
 
                             throw nvae;
 
@@ -832,18 +878,18 @@ public class LatexToHtmlLexer extends Lexer {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 4, 22, input);
+                            new NoViableAltException("", 4, 25, input);
 
                         throw nvae;
 
                     }
                 }
-                else if ( (LA4_10=='i') ) {
+                else if ( (LA4_12=='i') ) {
                     alt4=14;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 4, 10, input);
+                        new NoViableAltException("", 4, 12, input);
 
                     throw nvae;
 
@@ -857,37 +903,37 @@ public class LatexToHtmlLexer extends Lexer {
                 break;
             case 'u':
                 {
-                int LA4_12 = input.LA(3);
+                int LA4_14 = input.LA(3);
 
-                if ( (LA4_12=='s') ) {
-                    int LA4_24 = input.LA(4);
+                if ( (LA4_14=='s') ) {
+                    int LA4_27 = input.LA(4);
 
-                    if ( (LA4_24=='e') ) {
-                        int LA4_26 = input.LA(5);
+                    if ( (LA4_27=='e') ) {
+                        int LA4_30 = input.LA(5);
 
-                        if ( (LA4_26=='p') ) {
-                            int LA4_28 = input.LA(6);
+                        if ( (LA4_30=='p') ) {
+                            int LA4_33 = input.LA(6);
 
-                            if ( (LA4_28=='a') ) {
-                                int LA4_31 = input.LA(7);
+                            if ( (LA4_33=='a') ) {
+                                int LA4_37 = input.LA(7);
 
-                                if ( (LA4_31=='c') ) {
-                                    int LA4_32 = input.LA(8);
+                                if ( (LA4_37=='c') ) {
+                                    int LA4_39 = input.LA(8);
 
-                                    if ( (LA4_32=='k') ) {
-                                        int LA4_33 = input.LA(9);
+                                    if ( (LA4_39=='k') ) {
+                                        int LA4_40 = input.LA(9);
 
-                                        if ( (LA4_33=='a') ) {
-                                            int LA4_34 = input.LA(10);
+                                        if ( (LA4_40=='a') ) {
+                                            int LA4_41 = input.LA(10);
 
-                                            if ( (LA4_34=='g') ) {
-                                                int LA4_35 = input.LA(11);
+                                            if ( (LA4_41=='g') ) {
+                                                int LA4_42 = input.LA(11);
 
-                                                if ( (LA4_35=='e') ) {
-                                                    int LA4_36 = input.LA(12);
+                                                if ( (LA4_42=='e') ) {
+                                                    int LA4_43 = input.LA(12);
 
-                                                    if ( ((LA4_36 >= ',' && LA4_36 <= '.')||(LA4_36 >= '0' && LA4_36 <= '9')||LA4_36==';'||(LA4_36 >= 'A' && LA4_36 <= '[')||LA4_36==']'||(LA4_36 >= 'a' && LA4_36 <= '{')) ) {
-                                                        alt4=19;
+                                                    if ( ((LA4_43 >= ',' && LA4_43 <= '.')||(LA4_43 >= '0' && LA4_43 <= '9')||LA4_43==';'||(LA4_43 >= 'A' && LA4_43 <= '[')||LA4_43==']'||(LA4_43 >= 'a' && LA4_43 <= '{')) ) {
+                                                        alt4=21;
                                                     }
                                                     else {
                                                         alt4=12;
@@ -895,7 +941,7 @@ public class LatexToHtmlLexer extends Lexer {
                                                 }
                                                 else {
                                                     NoViableAltException nvae =
-                                                        new NoViableAltException("", 4, 35, input);
+                                                        new NoViableAltException("", 4, 42, input);
 
                                                     throw nvae;
 
@@ -903,7 +949,7 @@ public class LatexToHtmlLexer extends Lexer {
                                             }
                                             else {
                                                 NoViableAltException nvae =
-                                                    new NoViableAltException("", 4, 34, input);
+                                                    new NoViableAltException("", 4, 41, input);
 
                                                 throw nvae;
 
@@ -911,7 +957,7 @@ public class LatexToHtmlLexer extends Lexer {
                                         }
                                         else {
                                             NoViableAltException nvae =
-                                                new NoViableAltException("", 4, 33, input);
+                                                new NoViableAltException("", 4, 40, input);
 
                                             throw nvae;
 
@@ -919,7 +965,7 @@ public class LatexToHtmlLexer extends Lexer {
                                     }
                                     else {
                                         NoViableAltException nvae =
-                                            new NoViableAltException("", 4, 32, input);
+                                            new NoViableAltException("", 4, 39, input);
 
                                         throw nvae;
 
@@ -927,7 +973,7 @@ public class LatexToHtmlLexer extends Lexer {
                                 }
                                 else {
                                     NoViableAltException nvae =
-                                        new NoViableAltException("", 4, 31, input);
+                                        new NoViableAltException("", 4, 37, input);
 
                                     throw nvae;
 
@@ -935,7 +981,7 @@ public class LatexToHtmlLexer extends Lexer {
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 4, 28, input);
+                                    new NoViableAltException("", 4, 33, input);
 
                                 throw nvae;
 
@@ -943,7 +989,7 @@ public class LatexToHtmlLexer extends Lexer {
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 4, 26, input);
+                                new NoViableAltException("", 4, 30, input);
 
                             throw nvae;
 
@@ -951,7 +997,7 @@ public class LatexToHtmlLexer extends Lexer {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 4, 24, input);
+                            new NoViableAltException("", 4, 27, input);
 
                         throw nvae;
 
@@ -959,7 +1005,7 @@ public class LatexToHtmlLexer extends Lexer {
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 4, 12, input);
+                        new NoViableAltException("", 4, 14, input);
 
                     throw nvae;
 
@@ -1006,6 +1052,11 @@ public class LatexToHtmlLexer extends Lexer {
             alt4=3;
             }
             break;
+        case '$':
+            {
+            alt4=17;
+            }
+            break;
         case ',':
         case '-':
         case '.':
@@ -1013,13 +1064,53 @@ public class LatexToHtmlLexer extends Lexer {
         case '[':
         case ']':
             {
-            int LA4_4 = input.LA(2);
+            int LA4_5 = input.LA(2);
 
-            if ( ((LA4_4 >= '\t' && LA4_4 <= '\n')||(LA4_4 >= '\f' && LA4_4 <= '\r')||LA4_4==' '||(LA4_4 >= ',' && LA4_4 <= '.')||(LA4_4 >= '0' && LA4_4 <= '9')||LA4_4==';'||(LA4_4 >= 'A' && LA4_4 <= '[')||LA4_4==']'||(LA4_4 >= 'a' && LA4_4 <= 'z')) ) {
-                alt4=18;
+            if ( ((LA4_5 >= '\t' && LA4_5 <= '\n')||(LA4_5 >= '\f' && LA4_5 <= '\r')||LA4_5==' '||(LA4_5 >= ',' && LA4_5 <= '.')||(LA4_5 >= '0' && LA4_5 <= '9')||LA4_5==';'||(LA4_5 >= 'A' && LA4_5 <= '[')||LA4_5==']'||(LA4_5 >= 'a' && LA4_5 <= 'z')) ) {
+                alt4=19;
             }
             else {
-                alt4=17;
+                alt4=18;
+            }
+            }
+            break;
+        case 'O':
+            {
+            int LA4_6 = input.LA(2);
+
+            if ( (LA4_6=='m') ) {
+                int LA4_22 = input.LA(3);
+
+                if ( (LA4_22=='e') ) {
+                    int LA4_28 = input.LA(4);
+
+                    if ( (LA4_28=='g') ) {
+                        int LA4_31 = input.LA(5);
+
+                        if ( (LA4_31=='a') ) {
+                            int LA4_34 = input.LA(6);
+
+                            if ( (LA4_34=='(') ) {
+                                alt4=20;
+                            }
+                            else {
+                                alt4=19;
+                            }
+                        }
+                        else {
+                            alt4=19;
+                        }
+                    }
+                    else {
+                        alt4=19;
+                    }
+                }
+                else {
+                    alt4=19;
+                }
+            }
+            else {
+                alt4=19;
             }
             }
             break;
@@ -1047,7 +1138,6 @@ public class LatexToHtmlLexer extends Lexer {
         case 'L':
         case 'M':
         case 'N':
-        case 'O':
         case 'P':
         case 'Q':
         case 'R':
@@ -1086,7 +1176,7 @@ public class LatexToHtmlLexer extends Lexer {
         case 'y':
         case 'z':
             {
-            alt4=18;
+            alt4=19;
             }
             break;
         case '\t':
@@ -1095,7 +1185,7 @@ public class LatexToHtmlLexer extends Lexer {
         case '\r':
         case ' ':
             {
-            alt4=20;
+            alt4=22;
             }
             break;
         default:
@@ -1108,25 +1198,25 @@ public class LatexToHtmlLexer extends Lexer {
 
         switch (alt4) {
             case 1 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:10: T__21
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:10: T__23
                 {
-                mT__21(); 
+                mT__23(); 
 
 
                 }
                 break;
             case 2 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:16: T__22
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:16: T__24
                 {
-                mT__22(); 
+                mT__24(); 
 
 
                 }
                 break;
             case 3 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:22: T__23
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:22: T__25
                 {
-                mT__23(); 
+                mT__25(); 
 
 
                 }
@@ -1236,31 +1326,47 @@ public class LatexToHtmlLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:136: PUNCT
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:136: DOLLAR
+                {
+                mDOLLAR(); 
+
+
+                }
+                break;
+            case 18 :
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:143: PUNCT
                 {
                 mPUNCT(); 
 
 
                 }
                 break;
-            case 18 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:142: TEXT_CONTENT
+            case 19 :
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:149: TEXT_CONTENT
                 {
                 mTEXT_CONTENT(); 
 
 
                 }
                 break;
-            case 19 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:155: USERPACKAGE
+            case 20 :
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:162: SPECIALCHAR
+                {
+                mSPECIALCHAR(); 
+
+
+                }
+                break;
+            case 21 :
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:174: USERPACKAGE
                 {
                 mUSERPACKAGE(); 
 
 
                 }
                 break;
-            case 20 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:167: WS
+            case 22 :
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:186: WS
                 {
                 mWS(); 
 

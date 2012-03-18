@@ -1,4 +1,4 @@
-// $ANTLR 3.4 D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g 2012-03-17 16:31:32
+// $ANTLR 3.4 D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g 2012-03-18 00:02:51
 
   package compiladores.lab01.parserLatexToHtml;
 
@@ -11,30 +11,32 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class LatexToHtmlParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AUTHOR", "BEGIN", "DOCUMENT", "DOCUMENTCLASS", "END", "INCLUDEGRAPHICS", "ITEM", "ITEMIZE", "MKTITLE", "PUNCT", "TEXTBF", "TEXTIT", "TEXT_CONTENT", "TITLE", "USEPACKAGE", "USERPACKAGE", "WS", "'\\\\'", "'{'", "'}'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AUTHOR", "BEGIN", "DOCUMENT", "DOCUMENTCLASS", "DOLLAR", "END", "INCLUDEGRAPHICS", "ITEM", "ITEMIZE", "MKTITLE", "PUNCT", "SPECIALCHAR", "TEXTBF", "TEXTIT", "TEXT_CONTENT", "TITLE", "USEPACKAGE", "USERPACKAGE", "WS", "'\\\\'", "'{'", "'}'"
     };
 
     public static final int EOF=-1;
-    public static final int T__21=21;
-    public static final int T__22=22;
     public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
     public static final int AUTHOR=4;
     public static final int BEGIN=5;
     public static final int DOCUMENT=6;
     public static final int DOCUMENTCLASS=7;
-    public static final int END=8;
-    public static final int INCLUDEGRAPHICS=9;
-    public static final int ITEM=10;
-    public static final int ITEMIZE=11;
-    public static final int MKTITLE=12;
-    public static final int PUNCT=13;
-    public static final int TEXTBF=14;
-    public static final int TEXTIT=15;
-    public static final int TEXT_CONTENT=16;
-    public static final int TITLE=17;
-    public static final int USEPACKAGE=18;
-    public static final int USERPACKAGE=19;
-    public static final int WS=20;
+    public static final int DOLLAR=8;
+    public static final int END=9;
+    public static final int INCLUDEGRAPHICS=10;
+    public static final int ITEM=11;
+    public static final int ITEMIZE=12;
+    public static final int MKTITLE=13;
+    public static final int PUNCT=14;
+    public static final int SPECIALCHAR=15;
+    public static final int TEXTBF=16;
+    public static final int TEXTIT=17;
+    public static final int TEXT_CONTENT=18;
+    public static final int TITLE=19;
+    public static final int USEPACKAGE=20;
+    public static final int USERPACKAGE=21;
+    public static final int WS=22;
 
     // delegates
     public Parser[] getDelegates() {
@@ -59,20 +61,52 @@ public class LatexToHtmlParser extends Parser {
 
 
 
+    // $ANTLR start "specialChar"
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:41:1: specialChar : DOLLAR '\\\\' SPECIALCHAR DOLLAR ;
+    public final void specialChar() throws RecognitionException {
+        try {
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:41:17: ( DOLLAR '\\\\' SPECIALCHAR DOLLAR )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:41:18: DOLLAR '\\\\' SPECIALCHAR DOLLAR
+            {
+            match(input,DOLLAR,FOLLOW_DOLLAR_in_specialChar351); 
+
+            match(input,23,FOLLOW_23_in_specialChar353); 
+
+            match(input,SPECIALCHAR,FOLLOW_SPECIALCHAR_in_specialChar355); 
+
+            match(input,DOLLAR,FOLLOW_DOLLAR_in_specialChar357); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        return ;
+    }
+    // $ANTLR end "specialChar"
+
+
+
     // $ANTLR start "author"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:38:1: author : AUTHOR '{' TEXT_CONTENT '}' ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:42:1: author : AUTHOR '{' TEXT_CONTENT '}' ;
     public final void author() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:38:17: ( AUTHOR '{' TEXT_CONTENT '}' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:38:18: AUTHOR '{' TEXT_CONTENT '}'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:42:17: ( AUTHOR '{' TEXT_CONTENT '}' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:42:18: AUTHOR '{' TEXT_CONTENT '}'
             {
-            match(input,AUTHOR,FOLLOW_AUTHOR_in_author330); 
+            match(input,AUTHOR,FOLLOW_AUTHOR_in_author372); 
 
-            match(input,22,FOLLOW_22_in_author332); 
+            match(input,24,FOLLOW_24_in_author374); 
 
-            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_author333); 
+            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_author375); 
 
-            match(input,23,FOLLOW_23_in_author334); 
+            match(input,25,FOLLOW_25_in_author376); 
 
             }
 
@@ -92,19 +126,19 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "textBF"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:39:1: textBF : TEXTBF '{' TEXT_CONTENT '}' ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:43:1: textBF : TEXTBF '{' TEXT_CONTENT '}' ;
     public final void textBF() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:39:17: ( TEXTBF '{' TEXT_CONTENT '}' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:39:18: TEXTBF '{' TEXT_CONTENT '}'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:43:17: ( TEXTBF '{' TEXT_CONTENT '}' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:43:18: TEXTBF '{' TEXT_CONTENT '}'
             {
-            match(input,TEXTBF,FOLLOW_TEXTBF_in_textBF349); 
+            match(input,TEXTBF,FOLLOW_TEXTBF_in_textBF391); 
 
-            match(input,22,FOLLOW_22_in_textBF351); 
+            match(input,24,FOLLOW_24_in_textBF393); 
 
-            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_textBF352); 
+            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_textBF394); 
 
-            match(input,23,FOLLOW_23_in_textBF353); 
+            match(input,25,FOLLOW_25_in_textBF395); 
 
             }
 
@@ -124,19 +158,19 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "textIT"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:40:1: textIT : TEXTIT '{' TEXT_CONTENT '}' ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:44:1: textIT : TEXTIT '{' TEXT_CONTENT '}' ;
     public final void textIT() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:40:17: ( TEXTIT '{' TEXT_CONTENT '}' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:40:18: TEXTIT '{' TEXT_CONTENT '}'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:44:17: ( TEXTIT '{' TEXT_CONTENT '}' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:44:18: TEXTIT '{' TEXT_CONTENT '}'
             {
-            match(input,TEXTIT,FOLLOW_TEXTIT_in_textIT368); 
+            match(input,TEXTIT,FOLLOW_TEXTIT_in_textIT410); 
 
-            match(input,22,FOLLOW_22_in_textIT370); 
+            match(input,24,FOLLOW_24_in_textIT412); 
 
-            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_textIT371); 
+            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_textIT413); 
 
-            match(input,23,FOLLOW_23_in_textIT372); 
+            match(input,25,FOLLOW_25_in_textIT414); 
 
             }
 
@@ -155,14 +189,44 @@ public class LatexToHtmlParser extends Parser {
 
 
 
+    // $ANTLR start "dollarIT"
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:45:1: dollarIT : DOLLAR TEXT_CONTENT DOLLAR ;
+    public final void dollarIT() throws RecognitionException {
+        try {
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:45:17: ( DOLLAR TEXT_CONTENT DOLLAR )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:45:19: DOLLAR TEXT_CONTENT DOLLAR
+            {
+            match(input,DOLLAR,FOLLOW_DOLLAR_in_dollarIT428); 
+
+            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_dollarIT430); 
+
+            match(input,DOLLAR,FOLLOW_DOLLAR_in_dollarIT432); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        return ;
+    }
+    // $ANTLR end "dollarIT"
+
+
+
     // $ANTLR start "mkTitle"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:41:1: mkTitle : MKTITLE ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:46:1: mkTitle : MKTITLE ;
     public final void mkTitle() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:41:17: ( MKTITLE )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:41:18: MKTITLE
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:46:17: ( MKTITLE )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:46:18: MKTITLE
             {
-            match(input,MKTITLE,FOLLOW_MKTITLE_in_mkTitle386); 
+            match(input,MKTITLE,FOLLOW_MKTITLE_in_mkTitle446); 
 
             }
 
@@ -182,15 +246,15 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "item"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:42:1: item : ITEM ( TEXT_CONTENT )+ ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:47:1: item : ITEM ( TEXT_CONTENT )+ ;
     public final void item() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:42:17: ( ITEM ( TEXT_CONTENT )+ )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:42:18: ITEM ( TEXT_CONTENT )+
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:47:17: ( ITEM ( TEXT_CONTENT )+ )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:47:18: ITEM ( TEXT_CONTENT )+
             {
-            match(input,ITEM,FOLLOW_ITEM_in_item403); 
+            match(input,ITEM,FOLLOW_ITEM_in_item463); 
 
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:42:23: ( TEXT_CONTENT )+
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:47:23: ( TEXT_CONTENT )+
             int cnt1=0;
             loop1:
             do {
@@ -204,9 +268,9 @@ public class LatexToHtmlParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:42:23: TEXT_CONTENT
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:47:23: TEXT_CONTENT
             	    {
-            	    match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_item405); 
+            	    match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_item465); 
 
             	    }
             	    break;
@@ -239,17 +303,17 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "itemList"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:43:1: itemList : BEGIN ITEMIZE ( item | itemList )* END ITEMIZE ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:48:1: itemList : BEGIN ITEMIZE ( item | itemList )* END ITEMIZE ;
     public final void itemList() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:43:17: ( BEGIN ITEMIZE ( item | itemList )* END ITEMIZE )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:43:18: BEGIN ITEMIZE ( item | itemList )* END ITEMIZE
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:48:17: ( BEGIN ITEMIZE ( item | itemList )* END ITEMIZE )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:48:18: BEGIN ITEMIZE ( item | itemList )* END ITEMIZE
             {
-            match(input,BEGIN,FOLLOW_BEGIN_in_itemList419); 
+            match(input,BEGIN,FOLLOW_BEGIN_in_itemList479); 
 
-            match(input,ITEMIZE,FOLLOW_ITEMIZE_in_itemList421); 
+            match(input,ITEMIZE,FOLLOW_ITEMIZE_in_itemList481); 
 
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:43:32: ( item | itemList )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:48:32: ( item | itemList )*
             loop2:
             do {
                 int alt2=3;
@@ -265,9 +329,9 @@ public class LatexToHtmlParser extends Parser {
 
                 switch (alt2) {
             	case 1 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:43:33: item
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:48:33: item
             	    {
-            	    pushFollow(FOLLOW_item_in_itemList424);
+            	    pushFollow(FOLLOW_item_in_itemList484);
             	    item();
 
             	    state._fsp--;
@@ -276,9 +340,9 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:43:38: itemList
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:48:38: itemList
             	    {
-            	    pushFollow(FOLLOW_itemList_in_itemList426);
+            	    pushFollow(FOLLOW_itemList_in_itemList486);
             	    itemList();
 
             	    state._fsp--;
@@ -293,9 +357,9 @@ public class LatexToHtmlParser extends Parser {
             } while (true);
 
 
-            match(input,END,FOLLOW_END_in_itemList430); 
+            match(input,END,FOLLOW_END_in_itemList490); 
 
-            match(input,ITEMIZE,FOLLOW_ITEMIZE_in_itemList432); 
+            match(input,ITEMIZE,FOLLOW_ITEMIZE_in_itemList492); 
 
             }
 
@@ -315,25 +379,25 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "document"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:44:1: document : BEGIN DOCUMENT command END DOCUMENT ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:49:1: document : BEGIN DOCUMENT command END DOCUMENT ;
     public final void document() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:44:17: ( BEGIN DOCUMENT command END DOCUMENT )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:44:18: BEGIN DOCUMENT command END DOCUMENT
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:49:17: ( BEGIN DOCUMENT command END DOCUMENT )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:49:18: BEGIN DOCUMENT command END DOCUMENT
             {
-            match(input,BEGIN,FOLLOW_BEGIN_in_document445); 
+            match(input,BEGIN,FOLLOW_BEGIN_in_document505); 
 
-            match(input,DOCUMENT,FOLLOW_DOCUMENT_in_document447); 
+            match(input,DOCUMENT,FOLLOW_DOCUMENT_in_document507); 
 
-            pushFollow(FOLLOW_command_in_document449);
+            pushFollow(FOLLOW_command_in_document509);
             command();
 
             state._fsp--;
 
 
-            match(input,END,FOLLOW_END_in_document451); 
+            match(input,END,FOLLOW_END_in_document511); 
 
-            match(input,DOCUMENT,FOLLOW_DOCUMENT_in_document453); 
+            match(input,DOCUMENT,FOLLOW_DOCUMENT_in_document513); 
 
             }
 
@@ -353,21 +417,21 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "title"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:45:1: title : TITLE '{' titleText= TEXT_CONTENT '}' ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:1: title : TITLE '{' titleText= TEXT_CONTENT '}' ;
     public final void title() throws RecognitionException {
         Token titleText=null;
 
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:45:17: ( TITLE '{' titleText= TEXT_CONTENT '}' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:45:18: TITLE '{' titleText= TEXT_CONTENT '}'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:17: ( TITLE '{' titleText= TEXT_CONTENT '}' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:18: TITLE '{' titleText= TEXT_CONTENT '}'
             {
-            match(input,TITLE,FOLLOW_TITLE_in_title469); 
+            match(input,TITLE,FOLLOW_TITLE_in_title529); 
 
-            match(input,22,FOLLOW_22_in_title471); 
+            match(input,24,FOLLOW_24_in_title531); 
 
-            titleText=(Token)match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_title475); 
+            titleText=(Token)match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_title535); 
 
-            match(input,23,FOLLOW_23_in_title477); 
+            match(input,25,FOLLOW_25_in_title537); 
 
             }
 
@@ -387,19 +451,19 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "graph"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:46:1: graph : INCLUDEGRAPHICS '{' TEXT_CONTENT '}' ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:51:1: graph : INCLUDEGRAPHICS '{' TEXT_CONTENT '}' ;
     public final void graph() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:46:17: ( INCLUDEGRAPHICS '{' TEXT_CONTENT '}' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:46:18: INCLUDEGRAPHICS '{' TEXT_CONTENT '}'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:51:17: ( INCLUDEGRAPHICS '{' TEXT_CONTENT '}' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:51:18: INCLUDEGRAPHICS '{' TEXT_CONTENT '}'
             {
-            match(input,INCLUDEGRAPHICS,FOLLOW_INCLUDEGRAPHICS_in_graph493); 
+            match(input,INCLUDEGRAPHICS,FOLLOW_INCLUDEGRAPHICS_in_graph553); 
 
-            match(input,22,FOLLOW_22_in_graph495); 
+            match(input,24,FOLLOW_24_in_graph555); 
 
-            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_graph496); 
+            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_graph556); 
 
-            match(input,23,FOLLOW_23_in_graph497); 
+            match(input,25,FOLLOW_25_in_graph557); 
 
             }
 
@@ -419,36 +483,36 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "documentClass"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:47:1: documentClass : DOCUMENTCLASS TEXT_CONTENT ( '{' TEXT_CONTENT '}' )* ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:52:1: documentClass : DOCUMENTCLASS TEXT_CONTENT ( '{' TEXT_CONTENT '}' )* ;
     public final void documentClass() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:47:17: ( DOCUMENTCLASS TEXT_CONTENT ( '{' TEXT_CONTENT '}' )* )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:47:18: DOCUMENTCLASS TEXT_CONTENT ( '{' TEXT_CONTENT '}' )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:52:17: ( DOCUMENTCLASS TEXT_CONTENT ( '{' TEXT_CONTENT '}' )* )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:52:18: DOCUMENTCLASS TEXT_CONTENT ( '{' TEXT_CONTENT '}' )*
             {
-            match(input,DOCUMENTCLASS,FOLLOW_DOCUMENTCLASS_in_documentClass505); 
+            match(input,DOCUMENTCLASS,FOLLOW_DOCUMENTCLASS_in_documentClass565); 
 
-            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_documentClass507); 
+            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_documentClass567); 
 
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:47:45: ( '{' TEXT_CONTENT '}' )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:52:45: ( '{' TEXT_CONTENT '}' )*
             loop3:
             do {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==22) ) {
+                if ( (LA3_0==24) ) {
                     alt3=1;
                 }
 
 
                 switch (alt3) {
             	case 1 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:47:46: '{' TEXT_CONTENT '}'
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:52:46: '{' TEXT_CONTENT '}'
             	    {
-            	    match(input,22,FOLLOW_22_in_documentClass510); 
+            	    match(input,24,FOLLOW_24_in_documentClass570); 
 
-            	    match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_documentClass511); 
+            	    match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_documentClass571); 
 
-            	    match(input,23,FOLLOW_23_in_documentClass512); 
+            	    match(input,25,FOLLOW_25_in_documentClass572); 
 
             	    }
             	    break;
@@ -477,21 +541,21 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "otherCommand"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:48:1: otherCommand : '\\\\' TEXT_CONTENT '{' TEXT_CONTENT '}' ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:53:1: otherCommand : '\\\\' TEXT_CONTENT '{' TEXT_CONTENT '}' ;
     public final void otherCommand() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:48:17: ( '\\\\' TEXT_CONTENT '{' TEXT_CONTENT '}' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:48:18: '\\\\' TEXT_CONTENT '{' TEXT_CONTENT '}'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:53:17: ( '\\\\' TEXT_CONTENT '{' TEXT_CONTENT '}' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:53:18: '\\\\' TEXT_CONTENT '{' TEXT_CONTENT '}'
             {
-            match(input,21,FOLLOW_21_in_otherCommand523); 
+            match(input,23,FOLLOW_23_in_otherCommand583); 
 
-            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_otherCommand524); 
+            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_otherCommand584); 
 
-            match(input,22,FOLLOW_22_in_otherCommand525); 
+            match(input,24,FOLLOW_24_in_otherCommand585); 
 
-            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_otherCommand526); 
+            match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_otherCommand586); 
 
-            match(input,23,FOLLOW_23_in_otherCommand527); 
+            match(input,25,FOLLOW_25_in_otherCommand587); 
 
             }
 
@@ -511,16 +575,16 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "command"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:1: command : ( documentClass | title | author | textBF | mkTitle | document | graph | itemList | textIT | otherCommand | TEXT_CONTENT )* ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:1: command : ( documentClass | title | author | textBF | mkTitle | document | graph | itemList | textIT | otherCommand | specialChar | dollarIT | TEXT_CONTENT )* ;
     public final void command() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:9: ( ( documentClass | title | author | textBF | mkTitle | document | graph | itemList | textIT | otherCommand | TEXT_CONTENT )* )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:11: ( documentClass | title | author | textBF | mkTitle | document | graph | itemList | textIT | otherCommand | TEXT_CONTENT )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:9: ( ( documentClass | title | author | textBF | mkTitle | document | graph | itemList | textIT | otherCommand | specialChar | dollarIT | TEXT_CONTENT )* )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:11: ( documentClass | title | author | textBF | mkTitle | document | graph | itemList | textIT | otherCommand | specialChar | dollarIT | TEXT_CONTENT )*
             {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:11: ( documentClass | title | author | textBF | mkTitle | document | graph | itemList | textIT | otherCommand | TEXT_CONTENT )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:11: ( documentClass | title | author | textBF | mkTitle | document | graph | itemList | textIT | otherCommand | specialChar | dollarIT | TEXT_CONTENT )*
             loop4:
             do {
-                int alt4=12;
+                int alt4=14;
                 switch ( input.LA(1) ) {
                 case DOCUMENTCLASS:
                     {
@@ -571,14 +635,28 @@ public class LatexToHtmlParser extends Parser {
                     alt4=9;
                     }
                     break;
-                case 21:
+                case 23:
                     {
                     alt4=10;
                     }
                     break;
+                case DOLLAR:
+                    {
+                    int LA4_11 = input.LA(2);
+
+                    if ( (LA4_11==23) ) {
+                        alt4=11;
+                    }
+                    else if ( (LA4_11==TEXT_CONTENT) ) {
+                        alt4=12;
+                    }
+
+
+                    }
+                    break;
                 case TEXT_CONTENT:
                     {
-                    alt4=11;
+                    alt4=13;
                     }
                     break;
 
@@ -586,9 +664,9 @@ public class LatexToHtmlParser extends Parser {
 
                 switch (alt4) {
             	case 1 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:12: documentClass
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:12: documentClass
             	    {
-            	    pushFollow(FOLLOW_documentClass_in_command536);
+            	    pushFollow(FOLLOW_documentClass_in_command596);
             	    documentClass();
 
             	    state._fsp--;
@@ -597,9 +675,9 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:26: title
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:26: title
             	    {
-            	    pushFollow(FOLLOW_title_in_command538);
+            	    pushFollow(FOLLOW_title_in_command598);
             	    title();
 
             	    state._fsp--;
@@ -608,9 +686,9 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:32: author
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:32: author
             	    {
-            	    pushFollow(FOLLOW_author_in_command540);
+            	    pushFollow(FOLLOW_author_in_command600);
             	    author();
 
             	    state._fsp--;
@@ -619,9 +697,9 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:39: textBF
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:39: textBF
             	    {
-            	    pushFollow(FOLLOW_textBF_in_command542);
+            	    pushFollow(FOLLOW_textBF_in_command602);
             	    textBF();
 
             	    state._fsp--;
@@ -630,9 +708,9 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 5 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:46: mkTitle
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:46: mkTitle
             	    {
-            	    pushFollow(FOLLOW_mkTitle_in_command544);
+            	    pushFollow(FOLLOW_mkTitle_in_command604);
             	    mkTitle();
 
             	    state._fsp--;
@@ -641,9 +719,9 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 6 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:54: document
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:54: document
             	    {
-            	    pushFollow(FOLLOW_document_in_command546);
+            	    pushFollow(FOLLOW_document_in_command606);
             	    document();
 
             	    state._fsp--;
@@ -652,9 +730,9 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 7 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:63: graph
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:63: graph
             	    {
-            	    pushFollow(FOLLOW_graph_in_command548);
+            	    pushFollow(FOLLOW_graph_in_command608);
             	    graph();
 
             	    state._fsp--;
@@ -663,9 +741,9 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 8 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:69: itemList
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:69: itemList
             	    {
-            	    pushFollow(FOLLOW_itemList_in_command550);
+            	    pushFollow(FOLLOW_itemList_in_command610);
             	    itemList();
 
             	    state._fsp--;
@@ -674,9 +752,9 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 9 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:78: textIT
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:78: textIT
             	    {
-            	    pushFollow(FOLLOW_textIT_in_command552);
+            	    pushFollow(FOLLOW_textIT_in_command612);
             	    textIT();
 
             	    state._fsp--;
@@ -685,9 +763,9 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 10 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:85: otherCommand
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:85: otherCommand
             	    {
-            	    pushFollow(FOLLOW_otherCommand_in_command554);
+            	    pushFollow(FOLLOW_otherCommand_in_command614);
             	    otherCommand();
 
             	    state._fsp--;
@@ -696,9 +774,31 @@ public class LatexToHtmlParser extends Parser {
             	    }
             	    break;
             	case 11 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:50:98: TEXT_CONTENT
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:98: specialChar
             	    {
-            	    match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_command556); 
+            	    pushFollow(FOLLOW_specialChar_in_command616);
+            	    specialChar();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+            	case 12 :
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:110: dollarIT
+            	    {
+            	    pushFollow(FOLLOW_dollarIT_in_command618);
+            	    dollarIT();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+            	case 13 :
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:55:119: TEXT_CONTENT
+            	    {
+            	    match(input,TEXT_CONTENT,FOLLOW_TEXT_CONTENT_in_command620); 
 
             	    }
             	    break;
@@ -727,13 +827,13 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "latex"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:59:1: latex : command ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:64:1: latex : command ;
     public final void latex() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:59:6: ( command )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:60:5: command
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:64:6: ( command )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:65:5: command
             {
-            pushFollow(FOLLOW_command_in_latex621);
+            pushFollow(FOLLOW_command_in_latex685);
             command();
 
             state._fsp--;
@@ -757,13 +857,13 @@ public class LatexToHtmlParser extends Parser {
 
 
     // $ANTLR start "rule"
-    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:65:1: rule : latex ;
+    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:70:1: rule : latex ;
     public final void rule() throws RecognitionException {
         try {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:65:5: ( latex )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:65:7: latex
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:70:5: ( latex )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:70:7: latex
             {
-            pushFollow(FOLLOW_latex_in_rule643);
+            pushFollow(FOLLOW_latex_in_rule707);
             latex();
 
             state._fsp--;
@@ -789,62 +889,71 @@ public class LatexToHtmlParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_AUTHOR_in_author330 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_author332 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_author333 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_author334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TEXTBF_in_textBF349 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_textBF351 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_textBF352 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_textBF353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TEXTIT_in_textIT368 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_textIT370 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_textIT371 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_textIT372 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_MKTITLE_in_mkTitle386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ITEM_in_item403 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_item405 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_BEGIN_in_itemList419 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ITEMIZE_in_itemList421 = new BitSet(new long[]{0x0000000000000520L});
-    public static final BitSet FOLLOW_item_in_itemList424 = new BitSet(new long[]{0x0000000000000520L});
-    public static final BitSet FOLLOW_itemList_in_itemList426 = new BitSet(new long[]{0x0000000000000520L});
-    public static final BitSet FOLLOW_END_in_itemList430 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ITEMIZE_in_itemList432 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BEGIN_in_document445 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_DOCUMENT_in_document447 = new BitSet(new long[]{0x000000000023D3B0L});
-    public static final BitSet FOLLOW_command_in_document449 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_END_in_document451 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_DOCUMENT_in_document453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TITLE_in_title469 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_title471 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_title475 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_title477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INCLUDEGRAPHICS_in_graph493 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_graph495 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_graph496 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_graph497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DOCUMENTCLASS_in_documentClass505 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_documentClass507 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_documentClass510 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_documentClass511 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_documentClass512 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_21_in_otherCommand523 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_otherCommand524 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_otherCommand525 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_otherCommand526 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_otherCommand527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_documentClass_in_command536 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_title_in_command538 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_author_in_command540 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_textBF_in_command542 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_mkTitle_in_command544 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_document_in_command546 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_graph_in_command548 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_itemList_in_command550 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_textIT_in_command552 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_otherCommand_in_command554 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_TEXT_CONTENT_in_command556 = new BitSet(new long[]{0x000000000023D2B2L});
-    public static final BitSet FOLLOW_command_in_latex621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_latex_in_rule643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOLLAR_in_specialChar351 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_specialChar353 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_SPECIALCHAR_in_specialChar355 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_DOLLAR_in_specialChar357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_AUTHOR_in_author372 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_author374 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_author375 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_author376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TEXTBF_in_textBF391 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_textBF393 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_textBF394 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_textBF395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TEXTIT_in_textIT410 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_textIT412 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_textIT413 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_textIT414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOLLAR_in_dollarIT428 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_dollarIT430 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_DOLLAR_in_dollarIT432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_MKTITLE_in_mkTitle446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ITEM_in_item463 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_item465 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_BEGIN_in_itemList479 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_ITEMIZE_in_itemList481 = new BitSet(new long[]{0x0000000000000A20L});
+    public static final BitSet FOLLOW_item_in_itemList484 = new BitSet(new long[]{0x0000000000000A20L});
+    public static final BitSet FOLLOW_itemList_in_itemList486 = new BitSet(new long[]{0x0000000000000A20L});
+    public static final BitSet FOLLOW_END_in_itemList490 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_ITEMIZE_in_itemList492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BEGIN_in_document505 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_DOCUMENT_in_document507 = new BitSet(new long[]{0x00000000008F27B0L});
+    public static final BitSet FOLLOW_command_in_document509 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_END_in_document511 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_DOCUMENT_in_document513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TITLE_in_title529 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_title531 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_title535 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_title537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INCLUDEGRAPHICS_in_graph553 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_graph555 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_graph556 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_graph557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOCUMENTCLASS_in_documentClass565 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_documentClass567 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_24_in_documentClass570 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_documentClass571 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_documentClass572 = new BitSet(new long[]{0x0000000001000002L});
+    public static final BitSet FOLLOW_23_in_otherCommand583 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_otherCommand584 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_otherCommand585 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_otherCommand586 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_otherCommand587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_documentClass_in_command596 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_title_in_command598 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_author_in_command600 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_textBF_in_command602 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_mkTitle_in_command604 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_document_in_command606 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_graph_in_command608 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_itemList_in_command610 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_textIT_in_command612 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_otherCommand_in_command614 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_specialChar_in_command616 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_dollarIT_in_command618 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_TEXT_CONTENT_in_command620 = new BitSet(new long[]{0x00000000008F25B2L});
+    public static final BitSet FOLLOW_command_in_latex685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_latex_in_rule707 = new BitSet(new long[]{0x0000000000000002L});
 
 }
