@@ -30,19 +30,19 @@ USEPACKAGE      :'\\''usepackage';
 INCLUDEGRAPHICS :'\\''includegraphics';
 TITLE           :'\\''title';
 MKTITLE         :'\\''maketitle';
-AUTHOR          :'\\author';
+AUTHOR          :'\\''author';
 DOLLAR          :'$';
-PUNCT           : ('.'|','|';'|'-'|'['|']');
+PUNCT           : ('.'|','|';'|'-'|'['|']'|'('|')');
+SPECIALCHAR     :'\\'('Omega'|'Alpha'|'Beta'|'Gamma');//Adicionar o resto;
 TEXT_CONTENT    :('a'..'z' | 'A'..'Z' | '0'..'9' | PUNCT )('a'..'z' | 'A'..'Z' | '0'..'9' | PUNCT | WS)*;
 
-SPECIALCHAR     :'Omega(n)';
 
 //COMMANDS
-specialChar     :DOLLAR '\\' SPECIALCHAR DOLLAR;
-author          :AUTHOR '{'TEXT_CONTENT'}';
-textBF          :TEXTBF '{'TEXT_CONTENT'}';
-textIT          :TEXTIT '{'TEXT_CONTENT'}';
-dollarIT        : DOLLAR TEXT_CONTENT DOLLAR;
+body            : TEXT_CONTENT|SPECIALCHAR;
+author          :AUTHOR '{'body*'}';
+textBF          :TEXTBF '{'body*'}';
+textIT          :TEXTIT '{'body*'}';
+dollarIT        : DOLLAR body* DOLLAR;
 mkTitle         :MKTITLE;
 item            :ITEM TEXT_CONTENT+;
 itemList        :BEGIN ITEMIZE (item|itemList)* END ITEMIZE;
@@ -50,16 +50,30 @@ document        :BEGIN DOCUMENT command END DOCUMENT;
 title           :TITLE '{' titleText=TEXT_CONTENT '}';
 graph           :INCLUDEGRAPHICS '{'TEXT_CONTENT'}';
 documentClass   :DOCUMENTCLASS TEXT_CONTENT ('{'TEXT_CONTENT'}')*;
-otherCommand    :'\\'TEXT_CONTENT'{'TEXT_CONTENT'}';
+otherCommand    :'\\'TEXT_CONTENT'{'TEXT_CONTENT'}' {throw new Excepion("COMMAND NOT FOUND");};
 
-command : (documentClass|title|author|textBF|mkTitle|document|graph|itemList|textIT|otherCommand|specialChar|dollarIT|TEXT_CONTENT)*;
+command : (
+	documentClass  |
+	title          |
+	author         |
+	textBF         |
+	mkTitle        |
+	document       |
+	graph          |
+	itemList       |
+	textIT         |
+	//otherCommand   |
+	dollarIT       |
+	TEXT_CONTENT   |
+	SPECIALCHAR
+)*;
 
 /// Ignores
-USERPACKAGE:
- USEPACKAGE (TEXT_CONTENT | '{'TEXT_CONTENT'}')* {$channel = HIDDEN;};
+USEPACKAGE_IGNORE:
+ USEPACKAGE (TEXT_CONTENT)*'{'TEXT_CONTENT'}'* {$channel = HIDDEN;};
 
 WS: (' ' | '\t' | '\n' | '\r' | '\f')+ {$channel = HIDDEN;};
-//IGNORES: (WS|USERPACKAGE)* {$channel = HIDDEN;};
+//IGNORE: (WS|USERPACKAGE)* {$channel = HIDDEN;};
 
 latex: 
     command

@@ -1,4 +1,4 @@
-// $ANTLR 3.4 D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g 2012-03-18 00:02:52
+// $ANTLR 3.4 D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g 2012-03-18 02:02:48
 
   package compiladores.lab01.parserLatexToHtml;
 
@@ -31,7 +31,7 @@ public class LatexToHtmlLexer extends Lexer {
     public static final int TEXT_CONTENT=18;
     public static final int TITLE=19;
     public static final int USEPACKAGE=20;
-    public static final int USERPACKAGE=21;
+    public static final int USEPACKAGE_IGNORE=21;
     public static final int WS=22;
 
     // delegates
@@ -413,10 +413,12 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = AUTHOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:33:17: ( '\\\\author' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:33:18: '\\\\author'
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:33:17: ( '\\\\' 'author' )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:33:18: '\\\\' 'author'
             {
-            match("\\author"); 
+            match('\\'); 
+
+            match("author"); 
 
 
 
@@ -457,10 +459,10 @@ public class LatexToHtmlLexer extends Lexer {
         try {
             int _type = PUNCT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:35:17: ( ( '.' | ',' | ';' | '-' | '[' | ']' ) )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:35:17: ( ( '.' | ',' | ';' | '-' | '[' | ']' | '(' | ')' ) )
             // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:
             {
-            if ( (input.LA(1) >= ',' && input.LA(1) <= '.')||input.LA(1)==';'||input.LA(1)=='['||input.LA(1)==']' ) {
+            if ( (input.LA(1) >= '(' && input.LA(1) <= ')')||(input.LA(1) >= ',' && input.LA(1) <= '.')||input.LA(1)==';'||input.LA(1)=='['||input.LA(1)==']' ) {
                 input.consume();
             }
             else {
@@ -481,15 +483,108 @@ public class LatexToHtmlLexer extends Lexer {
     }
     // $ANTLR end "PUNCT"
 
+    // $ANTLR start "SPECIALCHAR"
+    public final void mSPECIALCHAR() throws RecognitionException {
+        try {
+            int _type = SPECIALCHAR;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:17: ( '\\\\' ( 'Omega' | 'Alpha' | 'Beta' | 'Gamma' ) )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:18: '\\\\' ( 'Omega' | 'Alpha' | 'Beta' | 'Gamma' )
+            {
+            match('\\'); 
+
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:22: ( 'Omega' | 'Alpha' | 'Beta' | 'Gamma' )
+            int alt1=4;
+            switch ( input.LA(1) ) {
+            case 'O':
+                {
+                alt1=1;
+                }
+                break;
+            case 'A':
+                {
+                alt1=2;
+                }
+                break;
+            case 'B':
+                {
+                alt1=3;
+                }
+                break;
+            case 'G':
+                {
+                alt1=4;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 1, 0, input);
+
+                throw nvae;
+
+            }
+
+            switch (alt1) {
+                case 1 :
+                    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:23: 'Omega'
+                    {
+                    match("Omega"); 
+
+
+
+                    }
+                    break;
+                case 2 :
+                    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:31: 'Alpha'
+                    {
+                    match("Alpha"); 
+
+
+
+                    }
+                    break;
+                case 3 :
+                    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:39: 'Beta'
+                    {
+                    match("Beta"); 
+
+
+
+                    }
+                    break;
+                case 4 :
+                    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:46: 'Gamma'
+                    {
+                    match("Gamma"); 
+
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "SPECIALCHAR"
+
     // $ANTLR start "TEXT_CONTENT"
     public final void mTEXT_CONTENT() throws RecognitionException {
         try {
             int _type = TEXT_CONTENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:17: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )* )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:18: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:37:17: ( ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )* )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:37:18: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )*
             {
-            if ( (input.LA(1) >= ',' && input.LA(1) <= '.')||(input.LA(1) >= '0' && input.LA(1) <= '9')||input.LA(1)==';'||(input.LA(1) >= 'A' && input.LA(1) <= '[')||input.LA(1)==']'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+            if ( (input.LA(1) >= '(' && input.LA(1) <= ')')||(input.LA(1) >= ',' && input.LA(1) <= '.')||(input.LA(1) >= '0' && input.LA(1) <= '9')||input.LA(1)==';'||(input.LA(1) >= 'A' && input.LA(1) <= '[')||input.LA(1)==']'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
             }
             else {
@@ -499,10 +594,10 @@ public class LatexToHtmlLexer extends Lexer {
             }
 
 
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:59: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )*
-            loop1:
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:37:59: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | PUNCT | WS )*
+            loop2:
             do {
-                int alt1=6;
+                int alt2=6;
                 switch ( input.LA(1) ) {
                 case 'a':
                 case 'b':
@@ -531,7 +626,7 @@ public class LatexToHtmlLexer extends Lexer {
                 case 'y':
                 case 'z':
                     {
-                    alt1=1;
+                    alt2=1;
                     }
                     break;
                 case 'A':
@@ -561,7 +656,7 @@ public class LatexToHtmlLexer extends Lexer {
                 case 'Y':
                 case 'Z':
                     {
-                    alt1=2;
+                    alt2=2;
                     }
                     break;
                 case '0':
@@ -575,9 +670,11 @@ public class LatexToHtmlLexer extends Lexer {
                 case '8':
                 case '9':
                     {
-                    alt1=3;
+                    alt2=3;
                     }
                     break;
+                case '(':
+                case ')':
                 case ',':
                 case '-':
                 case '.':
@@ -585,7 +682,7 @@ public class LatexToHtmlLexer extends Lexer {
                 case '[':
                 case ']':
                     {
-                    alt1=4;
+                    alt2=4;
                     }
                     break;
                 case '\t':
@@ -594,36 +691,36 @@ public class LatexToHtmlLexer extends Lexer {
                 case '\r':
                 case ' ':
                     {
-                    alt1=5;
+                    alt2=5;
                     }
                     break;
 
                 }
 
-                switch (alt1) {
+                switch (alt2) {
             	case 1 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:60: 'a' .. 'z'
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:37:60: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
             	    }
             	    break;
             	case 2 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:71: 'A' .. 'Z'
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:37:71: 'A' .. 'Z'
             	    {
             	    matchRange('A','Z'); 
 
             	    }
             	    break;
             	case 3 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:82: '0' .. '9'
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:37:82: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
             	    }
             	    break;
             	case 4 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:93: PUNCT
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:37:93: PUNCT
             	    {
             	    mPUNCT(); 
 
@@ -631,7 +728,7 @@ public class LatexToHtmlLexer extends Lexer {
             	    }
             	    break;
             	case 5 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:36:101: WS
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:37:101: WS
             	    {
             	    mWS(); 
 
@@ -640,7 +737,7 @@ public class LatexToHtmlLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop1;
+            	    break loop2;
                 }
             } while (true);
 
@@ -656,78 +753,71 @@ public class LatexToHtmlLexer extends Lexer {
     }
     // $ANTLR end "TEXT_CONTENT"
 
-    // $ANTLR start "SPECIALCHAR"
-    public final void mSPECIALCHAR() throws RecognitionException {
+    // $ANTLR start "USEPACKAGE_IGNORE"
+    public final void mUSEPACKAGE_IGNORE() throws RecognitionException {
         try {
-            int _type = SPECIALCHAR;
+            int _type = USEPACKAGE_IGNORE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:38:17: ( 'Omega(n)' )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:38:18: 'Omega(n)'
-            {
-            match("Omega(n)"); 
-
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "SPECIALCHAR"
-
-    // $ANTLR start "USERPACKAGE"
-    public final void mUSERPACKAGE() throws RecognitionException {
-        try {
-            int _type = USERPACKAGE;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:58:12: ( USEPACKAGE ( TEXT_CONTENT | '{' TEXT_CONTENT '}' )* )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:59:2: USEPACKAGE ( TEXT_CONTENT | '{' TEXT_CONTENT '}' )*
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:72:18: ( USEPACKAGE ( TEXT_CONTENT )* '{' TEXT_CONTENT ( '}' )* )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:73:2: USEPACKAGE ( TEXT_CONTENT )* '{' TEXT_CONTENT ( '}' )*
             {
             mUSEPACKAGE(); 
 
 
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:59:13: ( TEXT_CONTENT | '{' TEXT_CONTENT '}' )*
-            loop2:
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:73:13: ( TEXT_CONTENT )*
+            loop3:
             do {
-                int alt2=3;
-                int LA2_0 = input.LA(1);
+                int alt3=2;
+                int LA3_0 = input.LA(1);
 
-                if ( ((LA2_0 >= ',' && LA2_0 <= '.')||(LA2_0 >= '0' && LA2_0 <= '9')||LA2_0==';'||(LA2_0 >= 'A' && LA2_0 <= '[')||LA2_0==']'||(LA2_0 >= 'a' && LA2_0 <= 'z')) ) {
-                    alt2=1;
-                }
-                else if ( (LA2_0=='{') ) {
-                    alt2=2;
+                if ( ((LA3_0 >= '(' && LA3_0 <= ')')||(LA3_0 >= ',' && LA3_0 <= '.')||(LA3_0 >= '0' && LA3_0 <= '9')||LA3_0==';'||(LA3_0 >= 'A' && LA3_0 <= '[')||LA3_0==']'||(LA3_0 >= 'a' && LA3_0 <= 'z')) ) {
+                    alt3=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt3) {
             	case 1 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:59:14: TEXT_CONTENT
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:73:14: TEXT_CONTENT
             	    {
             	    mTEXT_CONTENT(); 
 
 
             	    }
             	    break;
-            	case 2 :
-            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:59:29: '{' TEXT_CONTENT '}'
+
+            	default :
+            	    break loop3;
+                }
+            } while (true);
+
+
+            match('{'); 
+
+            mTEXT_CONTENT(); 
+
+
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:73:43: ( '}' )*
+            loop4:
+            do {
+                int alt4=2;
+                int LA4_0 = input.LA(1);
+
+                if ( (LA4_0=='}') ) {
+                    alt4=1;
+                }
+
+
+                switch (alt4) {
+            	case 1 :
+            	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:73:43: '}'
             	    {
-            	    match('{'); 
-
-            	    mTEXT_CONTENT(); 
-
-
             	    match('}'); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop4;
                 }
             } while (true);
 
@@ -743,29 +833,29 @@ public class LatexToHtmlLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "USERPACKAGE"
+    // $ANTLR end "USEPACKAGE_IGNORE"
 
     // $ANTLR start "WS"
     public final void mWS() throws RecognitionException {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:61:3: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:61:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:75:3: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:75:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             {
-            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:61:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
-            int cnt3=0;
-            loop3:
+            // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:75:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            int cnt5=0;
+            loop5:
             do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( ((LA3_0 >= '\t' && LA3_0 <= '\n')||(LA3_0 >= '\f' && LA3_0 <= '\r')||LA3_0==' ') ) {
-                    alt3=1;
+                if ( ((LA5_0 >= '\t' && LA5_0 <= '\n')||(LA5_0 >= '\f' && LA5_0 <= '\r')||LA5_0==' ') ) {
+                    alt5=1;
                 }
 
 
-                switch (alt3) {
+                switch (alt5) {
             	case 1 :
             	    // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:
             	    {
@@ -783,12 +873,12 @@ public class LatexToHtmlLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt3 >= 1 ) break loop3;
+            	    if ( cnt5 >= 1 ) break loop5;
                         EarlyExitException eee =
-                            new EarlyExitException(3, input);
+                            new EarlyExitException(5, input);
                         throw eee;
                 }
-                cnt3++;
+                cnt5++;
             } while (true);
 
 
@@ -806,35 +896,35 @@ public class LatexToHtmlLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:8: ( T__23 | T__24 | T__25 | BEGIN | DOCUMENTCLASS | DOCUMENT | ITEMIZE | ITEM | TEXTBF | TEXTIT | END | USEPACKAGE | INCLUDEGRAPHICS | TITLE | MKTITLE | AUTHOR | DOLLAR | PUNCT | TEXT_CONTENT | SPECIALCHAR | USERPACKAGE | WS )
-        int alt4=22;
+        // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:8: ( T__23 | T__24 | T__25 | BEGIN | DOCUMENTCLASS | DOCUMENT | ITEMIZE | ITEM | TEXTBF | TEXTIT | END | USEPACKAGE | INCLUDEGRAPHICS | TITLE | MKTITLE | AUTHOR | DOLLAR | PUNCT | SPECIALCHAR | TEXT_CONTENT | USEPACKAGE_IGNORE | WS )
+        int alt6=22;
         switch ( input.LA(1) ) {
         case '\\':
             {
             switch ( input.LA(2) ) {
             case 'b':
                 {
-                alt4=4;
+                alt6=4;
                 }
                 break;
             case 'd':
                 {
-                alt4=5;
+                alt6=5;
                 }
                 break;
             case 'i':
                 {
-                int LA4_11 = input.LA(3);
+                int LA6_10 = input.LA(3);
 
-                if ( (LA4_11=='t') ) {
-                    alt4=8;
+                if ( (LA6_10=='t') ) {
+                    alt6=8;
                 }
-                else if ( (LA4_11=='n') ) {
-                    alt4=13;
+                else if ( (LA6_10=='n') ) {
+                    alt6=13;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 4, 11, input);
+                        new NoViableAltException("", 6, 10, input);
 
                     throw nvae;
 
@@ -843,26 +933,26 @@ public class LatexToHtmlLexer extends Lexer {
                 break;
             case 't':
                 {
-                int LA4_12 = input.LA(3);
+                int LA6_11 = input.LA(3);
 
-                if ( (LA4_12=='e') ) {
-                    int LA4_25 = input.LA(4);
+                if ( (LA6_11=='e') ) {
+                    int LA6_24 = input.LA(4);
 
-                    if ( (LA4_25=='x') ) {
-                        int LA4_29 = input.LA(5);
+                    if ( (LA6_24=='x') ) {
+                        int LA6_27 = input.LA(5);
 
-                        if ( (LA4_29=='t') ) {
-                            int LA4_32 = input.LA(6);
+                        if ( (LA6_27=='t') ) {
+                            int LA6_29 = input.LA(6);
 
-                            if ( (LA4_32=='b') ) {
-                                alt4=9;
+                            if ( (LA6_29=='b') ) {
+                                alt6=9;
                             }
-                            else if ( (LA4_32=='i') ) {
-                                alt4=10;
+                            else if ( (LA6_29=='i') ) {
+                                alt6=10;
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 4, 32, input);
+                                    new NoViableAltException("", 6, 29, input);
 
                                 throw nvae;
 
@@ -870,7 +960,7 @@ public class LatexToHtmlLexer extends Lexer {
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 4, 29, input);
+                                new NoViableAltException("", 6, 27, input);
 
                             throw nvae;
 
@@ -878,18 +968,18 @@ public class LatexToHtmlLexer extends Lexer {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 4, 25, input);
+                            new NoViableAltException("", 6, 24, input);
 
                         throw nvae;
 
                     }
                 }
-                else if ( (LA4_12=='i') ) {
-                    alt4=14;
+                else if ( (LA6_11=='i') ) {
+                    alt6=14;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 4, 12, input);
+                        new NoViableAltException("", 6, 11, input);
 
                     throw nvae;
 
@@ -898,50 +988,50 @@ public class LatexToHtmlLexer extends Lexer {
                 break;
             case 'e':
                 {
-                alt4=11;
+                alt6=11;
                 }
                 break;
             case 'u':
                 {
-                int LA4_14 = input.LA(3);
+                int LA6_13 = input.LA(3);
 
-                if ( (LA4_14=='s') ) {
-                    int LA4_27 = input.LA(4);
+                if ( (LA6_13=='s') ) {
+                    int LA6_26 = input.LA(4);
 
-                    if ( (LA4_27=='e') ) {
-                        int LA4_30 = input.LA(5);
+                    if ( (LA6_26=='e') ) {
+                        int LA6_28 = input.LA(5);
 
-                        if ( (LA4_30=='p') ) {
-                            int LA4_33 = input.LA(6);
+                        if ( (LA6_28=='p') ) {
+                            int LA6_30 = input.LA(6);
 
-                            if ( (LA4_33=='a') ) {
-                                int LA4_37 = input.LA(7);
+                            if ( (LA6_30=='a') ) {
+                                int LA6_33 = input.LA(7);
 
-                                if ( (LA4_37=='c') ) {
-                                    int LA4_39 = input.LA(8);
+                                if ( (LA6_33=='c') ) {
+                                    int LA6_34 = input.LA(8);
 
-                                    if ( (LA4_39=='k') ) {
-                                        int LA4_40 = input.LA(9);
+                                    if ( (LA6_34=='k') ) {
+                                        int LA6_35 = input.LA(9);
 
-                                        if ( (LA4_40=='a') ) {
-                                            int LA4_41 = input.LA(10);
+                                        if ( (LA6_35=='a') ) {
+                                            int LA6_36 = input.LA(10);
 
-                                            if ( (LA4_41=='g') ) {
-                                                int LA4_42 = input.LA(11);
+                                            if ( (LA6_36=='g') ) {
+                                                int LA6_37 = input.LA(11);
 
-                                                if ( (LA4_42=='e') ) {
-                                                    int LA4_43 = input.LA(12);
+                                                if ( (LA6_37=='e') ) {
+                                                    int LA6_38 = input.LA(12);
 
-                                                    if ( ((LA4_43 >= ',' && LA4_43 <= '.')||(LA4_43 >= '0' && LA4_43 <= '9')||LA4_43==';'||(LA4_43 >= 'A' && LA4_43 <= '[')||LA4_43==']'||(LA4_43 >= 'a' && LA4_43 <= '{')) ) {
-                                                        alt4=21;
+                                                    if ( ((LA6_38 >= '(' && LA6_38 <= ')')||(LA6_38 >= ',' && LA6_38 <= '.')||(LA6_38 >= '0' && LA6_38 <= '9')||LA6_38==';'||(LA6_38 >= 'A' && LA6_38 <= '[')||LA6_38==']'||(LA6_38 >= 'a' && LA6_38 <= '{')) ) {
+                                                        alt6=21;
                                                     }
                                                     else {
-                                                        alt4=12;
+                                                        alt6=12;
                                                     }
                                                 }
                                                 else {
                                                     NoViableAltException nvae =
-                                                        new NoViableAltException("", 4, 42, input);
+                                                        new NoViableAltException("", 6, 37, input);
 
                                                     throw nvae;
 
@@ -949,7 +1039,7 @@ public class LatexToHtmlLexer extends Lexer {
                                             }
                                             else {
                                                 NoViableAltException nvae =
-                                                    new NoViableAltException("", 4, 41, input);
+                                                    new NoViableAltException("", 6, 36, input);
 
                                                 throw nvae;
 
@@ -957,7 +1047,7 @@ public class LatexToHtmlLexer extends Lexer {
                                         }
                                         else {
                                             NoViableAltException nvae =
-                                                new NoViableAltException("", 4, 40, input);
+                                                new NoViableAltException("", 6, 35, input);
 
                                             throw nvae;
 
@@ -965,7 +1055,7 @@ public class LatexToHtmlLexer extends Lexer {
                                     }
                                     else {
                                         NoViableAltException nvae =
-                                            new NoViableAltException("", 4, 39, input);
+                                            new NoViableAltException("", 6, 34, input);
 
                                         throw nvae;
 
@@ -973,7 +1063,7 @@ public class LatexToHtmlLexer extends Lexer {
                                 }
                                 else {
                                     NoViableAltException nvae =
-                                        new NoViableAltException("", 4, 37, input);
+                                        new NoViableAltException("", 6, 33, input);
 
                                     throw nvae;
 
@@ -981,7 +1071,7 @@ public class LatexToHtmlLexer extends Lexer {
                             }
                             else {
                                 NoViableAltException nvae =
-                                    new NoViableAltException("", 4, 33, input);
+                                    new NoViableAltException("", 6, 30, input);
 
                                 throw nvae;
 
@@ -989,7 +1079,7 @@ public class LatexToHtmlLexer extends Lexer {
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 4, 30, input);
+                                new NoViableAltException("", 6, 28, input);
 
                             throw nvae;
 
@@ -997,7 +1087,7 @@ public class LatexToHtmlLexer extends Lexer {
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 4, 27, input);
+                            new NoViableAltException("", 6, 26, input);
 
                         throw nvae;
 
@@ -1005,7 +1095,7 @@ public class LatexToHtmlLexer extends Lexer {
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 4, 14, input);
+                        new NoViableAltException("", 6, 13, input);
 
                     throw nvae;
 
@@ -1014,16 +1104,24 @@ public class LatexToHtmlLexer extends Lexer {
                 break;
             case 'm':
                 {
-                alt4=15;
+                alt6=15;
                 }
                 break;
             case 'a':
                 {
-                alt4=16;
+                alt6=16;
+                }
+                break;
+            case 'A':
+            case 'B':
+            case 'G':
+            case 'O':
+                {
+                alt6=19;
                 }
                 break;
             default:
-                alt4=1;
+                alt6=1;
             }
 
             }
@@ -1033,30 +1131,32 @@ public class LatexToHtmlLexer extends Lexer {
             switch ( input.LA(2) ) {
             case 'd':
                 {
-                alt4=6;
+                alt6=6;
                 }
                 break;
             case 'i':
                 {
-                alt4=7;
+                alt6=7;
                 }
                 break;
             default:
-                alt4=2;
+                alt6=2;
             }
 
             }
             break;
         case '}':
             {
-            alt4=3;
+            alt6=3;
             }
             break;
         case '$':
             {
-            alt4=17;
+            alt6=17;
             }
             break;
+        case '(':
+        case ')':
         case ',':
         case '-':
         case '.':
@@ -1064,53 +1164,13 @@ public class LatexToHtmlLexer extends Lexer {
         case '[':
         case ']':
             {
-            int LA4_5 = input.LA(2);
+            int LA6_5 = input.LA(2);
 
-            if ( ((LA4_5 >= '\t' && LA4_5 <= '\n')||(LA4_5 >= '\f' && LA4_5 <= '\r')||LA4_5==' '||(LA4_5 >= ',' && LA4_5 <= '.')||(LA4_5 >= '0' && LA4_5 <= '9')||LA4_5==';'||(LA4_5 >= 'A' && LA4_5 <= '[')||LA4_5==']'||(LA4_5 >= 'a' && LA4_5 <= 'z')) ) {
-                alt4=19;
+            if ( ((LA6_5 >= '\t' && LA6_5 <= '\n')||(LA6_5 >= '\f' && LA6_5 <= '\r')||LA6_5==' '||(LA6_5 >= '(' && LA6_5 <= ')')||(LA6_5 >= ',' && LA6_5 <= '.')||(LA6_5 >= '0' && LA6_5 <= '9')||LA6_5==';'||(LA6_5 >= 'A' && LA6_5 <= '[')||LA6_5==']'||(LA6_5 >= 'a' && LA6_5 <= 'z')) ) {
+                alt6=20;
             }
             else {
-                alt4=18;
-            }
-            }
-            break;
-        case 'O':
-            {
-            int LA4_6 = input.LA(2);
-
-            if ( (LA4_6=='m') ) {
-                int LA4_22 = input.LA(3);
-
-                if ( (LA4_22=='e') ) {
-                    int LA4_28 = input.LA(4);
-
-                    if ( (LA4_28=='g') ) {
-                        int LA4_31 = input.LA(5);
-
-                        if ( (LA4_31=='a') ) {
-                            int LA4_34 = input.LA(6);
-
-                            if ( (LA4_34=='(') ) {
-                                alt4=20;
-                            }
-                            else {
-                                alt4=19;
-                            }
-                        }
-                        else {
-                            alt4=19;
-                        }
-                    }
-                    else {
-                        alt4=19;
-                    }
-                }
-                else {
-                    alt4=19;
-                }
-            }
-            else {
-                alt4=19;
+                alt6=18;
             }
             }
             break;
@@ -1138,6 +1198,7 @@ public class LatexToHtmlLexer extends Lexer {
         case 'L':
         case 'M':
         case 'N':
+        case 'O':
         case 'P':
         case 'Q':
         case 'R':
@@ -1176,7 +1237,7 @@ public class LatexToHtmlLexer extends Lexer {
         case 'y':
         case 'z':
             {
-            alt4=19;
+            alt6=20;
             }
             break;
         case '\t':
@@ -1185,18 +1246,18 @@ public class LatexToHtmlLexer extends Lexer {
         case '\r':
         case ' ':
             {
-            alt4=22;
+            alt6=22;
             }
             break;
         default:
             NoViableAltException nvae =
-                new NoViableAltException("", 4, 0, input);
+                new NoViableAltException("", 6, 0, input);
 
             throw nvae;
 
         }
 
-        switch (alt4) {
+        switch (alt6) {
             case 1 :
                 // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:10: T__23
                 {
@@ -1342,31 +1403,31 @@ public class LatexToHtmlLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:149: TEXT_CONTENT
-                {
-                mTEXT_CONTENT(); 
-
-
-                }
-                break;
-            case 20 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:162: SPECIALCHAR
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:149: SPECIALCHAR
                 {
                 mSPECIALCHAR(); 
 
 
                 }
                 break;
-            case 21 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:174: USERPACKAGE
+            case 20 :
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:161: TEXT_CONTENT
                 {
-                mUSERPACKAGE(); 
+                mTEXT_CONTENT(); 
+
+
+                }
+                break;
+            case 21 :
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:174: USEPACKAGE_IGNORE
+                {
+                mUSEPACKAGE_IGNORE(); 
 
 
                 }
                 break;
             case 22 :
-                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:186: WS
+                // D:\\Compiladores\\Lab-de-Compiladores-01\\src\\compiladores\\lab01\\parserLatexToHtml\\LatexToHtml.g:1:192: WS
                 {
                 mWS(); 
 
